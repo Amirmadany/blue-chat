@@ -34,8 +34,6 @@
                     
                         <img v-if="(userData.photoURL != '' && userData.photoURL != null && userData.photoURL != undefined) && item.owner != myAccount.email" :src="userData.photoURL" alt="">
                         
-                        <img v-else-if="myAccount.photoURL != '' && myAccount.photoURL != null && myAccount.photoURL != undefined" :src="myAccount.photoURL" alt="">
-
                         <img v-else :src="require('@/assets/images/user-pic.jpg')" alt="">
 
                     </div>
