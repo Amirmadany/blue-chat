@@ -1,6 +1,6 @@
 <template>
 
-    <main>
+    <main class="mx-sm-0 mx-4">
 
         <div class="info-box" @click="showModal">
             <i class="fas fa-question"></i>
