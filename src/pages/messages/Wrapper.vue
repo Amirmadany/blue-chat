@@ -252,6 +252,9 @@ export default {
 
             }
 
+            if(chatListInfo.length == 0)
+                chatListLoading.value = false
+
             chatList.value = chatListInfo
             chatsInfo.value = chats
         }
