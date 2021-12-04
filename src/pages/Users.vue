@@ -112,8 +112,8 @@ export default {
             
             // come find users by base email or displayName
             users.value.map(item => {
-                if(item.email.includes(search.value) ||
-                   item.displayName.includes(search.value))
+                if(item.email.toLowerCase().includes(search.value.toLowerCase()) ||
+                   item.displayName.toLowerCase().includes(search.value.toLowerCase()))
                     items.push(item)
                 
             })
