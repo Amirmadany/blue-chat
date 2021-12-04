@@ -205,6 +205,11 @@
         padding: 1.5rem 0.5rem 1.5rem 1.5rem;
     }
 
+    .button{
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+    }
+
 }
 
 @media (max-width: 29.9375rem){
