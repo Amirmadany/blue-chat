@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Vazir;
+    src: url('./vazir/Vazir-Regular.eot');
+    src: url('./vazir/Vazir-Regular.eot?#iefix') format('embedded-opentype'),
+         url('./vazir/Vazir-Regular.woff2') format('woff2'),
+         url('./vazir/Vazir-Regular.woff') format('woff'),
+         url('./vazir/Vazir-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('./vazir/Vazir-Bold.eot');
+    src: url('./vazir/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+         url('./vazir/Vazir-Bold.woff2') format('woff2'),
+         url('./vazir/Vazir-Bold.woff') format('woff'),
+         url('./vazir/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('./vazir/Vazir-Black.eot');
+    src: url('./vazir/Vazir-Black.eot?#iefix') format('embedded-opentype'),
+         url('./vazir/Vazir-Black.woff2') format('woff2'),
+         url('./vazir/Vazir-Black.woff') format('woff'),
+         url('./vazir/Vazir-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('./vazir/Vazir-Medium.eot');
+    src: url('./vazir/Vazir-Medium.eot?#iefix') format('embedded-opentype'),
+         url('./vazir/Vazir-Medium.woff2') format('woff2'),
+         url('./vazir/Vazir-Medium.woff') format('woff'),
+         url('./vazir/Vazir-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+*{
+    font-family: 'Vazir' !important;
+    margin: 0;
+    box-sizing: border-box;
+}
