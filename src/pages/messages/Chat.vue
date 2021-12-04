@@ -32,7 +32,7 @@
 
                     <div class="message-list-item-image">
                     
-                        <img v-if="(userData.photoURL != '' && userData.photoURL != null && userData.photoURL != undefined) && item.owner != myAccount.email" :src="userData.photoURL" alt="">
+                        <img v-if="(userData.photoURL != '' && userData.photoURL != null && userData.photoURL != undefined)" :src="userData.photoURL" alt="">
                         
                         <img v-else :src="require('@/assets/images/user-pic.jpg')" alt="">
 
