@@ -34,8 +34,8 @@ export default {
 
             // find the chat
             props.chatList.map(item => {
-                if(item.userInfo.displayName.includes(value) || 
-                   item.userInfo.email.includes(value))
+                if(item.userInfo.displayName.toLowerCase().includes(value.toLowerCase()) || 
+                   item.userInfo.email.toLowerCase().includes(value.toLowerCase()))
                     result.push(item)
             })
 
