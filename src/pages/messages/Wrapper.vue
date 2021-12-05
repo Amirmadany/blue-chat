@@ -31,7 +31,7 @@
                     :last-messages="lastMessages"
                 />
 
-                <div v-else class="chat-empty-page">
+                <div v-else class="chat-empty-page d-lg-flex d-none">
 
                     <i class="far fa-comment-alt"></i>
 
