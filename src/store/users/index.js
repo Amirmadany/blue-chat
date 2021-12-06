@@ -4,8 +4,8 @@ const store = {
     state: () => ({
         users: null,
         optionShow: {
-            countEachShow: 2,
-            currentIndexShow: 2
+            countEachShow: 4,
+            currentIndexShow: 4
         }
     }),
 

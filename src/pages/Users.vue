@@ -13,7 +13,7 @@
             </form>
        </div>
 
-        <div class="row g-4 mt-5 direction-left">
+        <div class="row g-4 mt-5 mb-5 direction-left">
 
             <div v-if="loading" class="spinner-border text-primary mx-auto"></div>
 
@@ -42,7 +42,7 @@
 
         </div>
 
-        <button @click="showMoreUser" v-if="users.length - 1> optionShow.currentIndexShow && canShowMoreBtn" class="button more-users-btn"> بیشتر </button>
+        <button @click="showMoreUser" v-if="users.length - 2 > optionShow.currentIndexShow && canShowMoreBtn" class="button more-users-btn"> بیشتر </button>
 
     </div>
 

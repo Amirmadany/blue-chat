@@ -12,11 +12,18 @@
             <i class="fas fa-plus"></i>
         </button>
 
+        <div v-if="state.loading" class="loading-picture">
+
+            <span class="spinner-border text-black"></span>
+
+        </div>
+
     </div>
 
 </template>
 
 <script>
+import { reactive } from 'vue'
 import { getStorage, ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage'
 
 export default {
@@ -30,6 +37,11 @@ export default {
     emits: [ 'loadingChanged', 'opendError', 'sendedNewPhoto', 'opendSuccess' ],
 
     setup(props, { emit }){
+        // data
+        const state = reactive({
+            loading: false
+        })
+
         // methods
         const getPic = (event) => {
             // get pic from file 
@@ -49,6 +61,8 @@ export default {
 
             // change loading status to enable
             emit('loadingChanged', true)
+            
+            state.loading = true
 
             // upload file to the server
             uploadTask.on('state_changed', () => {
@@ -59,6 +73,8 @@ export default {
 
                 // change loading status to disable
                 emit('loadingChanged', false)
+
+                state.loading = false
             },
             () => {
                 // Upload completed successfully, now we can get the download URL
@@ -71,17 +87,33 @@ export default {
                     
                     // change loading status to disable
                     emit('loadingChanged', false)
+
+                    state.loading = false
                 });
             })
         }
 
         return {
+            state,
             getPic
         }
     }
 }
 </script>
 
-<style>
+<style scoped>
+
+    .loading-picture{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.432);
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 </style>
