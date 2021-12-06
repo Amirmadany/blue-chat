@@ -26,9 +26,15 @@
                  <router-link :to="{ name: 'user-info', params: { email: user.email } }" class="user-card shadow">
 
                     <div 
-                        v-if="user.photoURL != '' || user.photoURL != null || user.photoURL != undefined"
+                        v-if="user.photoURL != '' && user.photoURL != null && user.photoURL != undefined"
                         class="user-card-image" 
                         :style="`background-image: url('${user.photoURL}')`">
+                    </div>
+
+                     <div 
+                        v-else
+                        class="user-card-image" 
+                        :style="`background-image: url('${require(`@/assets/images/user-pic.jpg`)}')`">
                     </div>
 
                     <h5 class="user-card-name"> {{ user.displayName }} </h5>
@@ -42,7 +48,7 @@
 
         </div>
 
-        <button @click="showMoreUser" v-if="users.length - 2 > optionShow.currentIndexShow && canShowMoreBtn" class="button more-users-btn"> بیشتر </button>
+        <button @click="showMoreUser" v-if="(users.length - 1 > optionShow.currentIndexShow) && canShowMoreBtn" class="button more-users-btn"> بیشتر </button>
 
     </div>
 
@@ -135,10 +141,10 @@ export default {
         }
 
         const showMoreUser = () => {
+            filteredUsers.value = usersItems.value.slice(0, optionShow.value.currentIndexShow + optionShow.value.countEachShow)
+
             // show more users 
             store.dispatch('users/addCurrentIndexShow')
-
-            filteredUsers.value = usersItems.value.slice(0, optionShow.value.currentIndexShow + optionShow.value.countEachShow)
         }
 
         // lifecycle hooks

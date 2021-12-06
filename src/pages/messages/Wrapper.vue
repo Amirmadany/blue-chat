@@ -137,8 +137,12 @@ export default {
                     getChatList()
                     getOnlyMyMessages()
                 }
-
             })
+
+            // after 5s come disable the chatList loading 
+            setTimeout(() => {
+                chatListLoading.value = false
+            }, 5000)
         }
 
         const sortLastMessage = (chats) => {
